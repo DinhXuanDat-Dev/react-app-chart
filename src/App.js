@@ -15,8 +15,6 @@ function App() {
       })
   },[]);
 
-  console.log('data', data);
-
   return (
     <div className="App">
       <Cards data = {data}/>

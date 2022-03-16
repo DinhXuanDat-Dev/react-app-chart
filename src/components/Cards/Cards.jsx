@@ -15,7 +15,7 @@ const Cards = ( data ) => {
     const { confirmed, recovered, deaths, lastUpdate} = data.data
 
     return (
-        <Grid wrap='no-wrap' container spacing={3} justifyContent="center" className={styles.container}>
+        <Grid container spacing={3} justifyContent="center" className={styles.container}>
             <Grid item component={Card} xs={12} md={3} className={ cx(styles.card, styles.infected)}>
                 <CardContent>
                     <Typography gutterBottom variant="h4" >

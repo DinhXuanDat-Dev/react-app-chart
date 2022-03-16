@@ -15,7 +15,7 @@ const Charts = () => {
 
     }, []);
 
-    console.log(dailyData);
+    // console.log(dailyData);
 
     if (!dailyData) return 'Fetching API...'
 

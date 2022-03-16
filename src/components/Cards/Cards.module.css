@@ -1,0 +1,19 @@
+.container {
+    flex-wrap: nowrap!important;
+}
+
+.card{
+    margin: 20px!important;
+}
+
+.infected {
+    border-bottom: blue solid 10px;
+}
+
+.recover {
+    border-bottom: lightgreen solid 10px;
+}
+
+.deaths {
+    border-bottom: red solid 10px;
+}

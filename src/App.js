@@ -15,11 +15,18 @@ function App() {
       })
   },[]);
 
+  const handleCountryChange = async (country) => {
+
+    console.log(country);
+    if (!country) return "Get country fail.."
+  }
+  
+
   return (
     <div className="App">
       <Cards data = {data}/>
+      <CountrySelect  handleCountryChange={handleCountryChange}/>
       <Charts />
-      <CountrySelect />
     </div>
   );
 }

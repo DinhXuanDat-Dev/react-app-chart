@@ -7,7 +7,6 @@ import cx from 'classnames';
 
 import styles from "./Cards.module.css"
 
-// const Cards = ({ data : {confirmed , recovered, deaths, lastUpdated} }) => {
 const Cards = ( data ) => {
 
     if(!data.data.confirmed) return 'loading...';

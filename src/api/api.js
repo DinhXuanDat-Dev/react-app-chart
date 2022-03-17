@@ -33,8 +33,6 @@ export const fetchDailyData = async () => {
             reportDate : data.reportDate,
         }))
 
-        console.log('modifiedDailyData', modifiedDailyData);
-
         return modifiedDailyData
     }
     catch(err) {
@@ -51,8 +49,6 @@ export const fetchCountry = async () => {
         const modifiedDataCountry =  arrayCountry.map((country) => ({
             name : country.name
         }))
-
-        console.log('modifiedDataCountry', modifiedDataCountry);
 
         return modifiedDataCountry
     }

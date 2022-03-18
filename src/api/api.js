@@ -2,9 +2,19 @@ import axios from "axios"
 
 const url_api = "https://covid19.mathdro.id/api"
 
-export const fetchData = async () => {
+export const fetchData = async ( country ) => {
+    
+    var api_country = url_api
+
+    if(country){
+        api_country = `https://covid19.mathdro.id/api/countries/${country}`
+    }
+
+    console.log('api-country', api_country);
+
+
     try {
-        const { data } = await axios.get(url_api)
+        const { data } = await axios.get(api_country)
 
         const modifiedData = {
             confirmed: data.confirmed,

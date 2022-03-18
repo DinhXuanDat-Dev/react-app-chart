@@ -17,13 +17,13 @@ const CountrySelect = forwardRef(( {handleCountryChange}, ref) => {
         fetchAPICountry();
     }, []); 
 
-
     return (
        <FormControl sx={{ margin: 5 }} className={styles.container}>
            <NativeSelect 
                 onChange ={ (e) => handleCountryChange(e.target.value)}
+                defaultValue=""
                 >
-                    <option value="vietnam">Viet Nam</option>
+                    <option value="">Global</option>
                         {countryArray.map((country, index) => (
                             <option key ={index} value={country.name}> {country.name}</option>
                         ))}

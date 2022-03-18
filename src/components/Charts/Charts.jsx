@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Bar, Line } from "react-chartjs-2";
 import { fetchDailyData } from "../../api/api";
+import styles from "./Charts.module.css"
 
 const Charts = ( {data, countryData} ) => {
 
@@ -15,10 +16,13 @@ const Charts = ( {data, countryData} ) => {
 
     const [dailyData, setDailyData] = useState([])
 
-    if (!dailyData) return 'Fetching API...'
+    if(!dailyData) return 'Fetching API...'
 
             
     const {confirmed, recovered, deaths} = data
+    console.log('countryData', countryData);
+
+
     if(!confirmed) return 'Fetching data faill'
 
     console.log('dailyData', dailyData);
@@ -81,7 +85,9 @@ const Charts = ( {data, countryData} ) => {
     return (
         <>
             <h1>Charts</h1>
-            {countryData ? barChart : lineChart}
+            <div className={styles.wrapper}>
+                {countryData.length === 0 ? lineChart : barChart}
+            </div>
         </>
         
     )
